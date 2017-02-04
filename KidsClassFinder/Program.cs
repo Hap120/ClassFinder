@@ -10,12 +10,13 @@ namespace KidsClassFinder
     {
         static void Main(string[] args)
         {
-            KidsClasses myClass = new KidsClasses();
+           /* KidsClasses myClass = new KidsClasses();
             myClass.Type = "Sports";
             myClass.Session = "Summer";
             myClass.ForAges = "10";
             myClass.LocationCity = "Redmond";
             Console.WriteLine($"Look for a {myClass.Type} class for age {myClass.ForAges} in {myClass.LocationCity} for the {myClass.Session}");
+            */
 
             //Questions:
             //Which of the two is more suitable for user entering information? The approach above ^ or the one following the comments ?
@@ -38,7 +39,6 @@ namespace KidsClassFinder
 
             Console.WriteLine($"Please wait until we look for a {SportType} class for age {age} in {city} for the {session}");
              
-            Console.WriteLine("0. Exit");
 
            // Console.WriteLine($"The following classes meet your requirement: {A}, {B}, {C}");
             //Can this placeholder info will be pulled from the array in ClaasDatabases.cs for now ?
