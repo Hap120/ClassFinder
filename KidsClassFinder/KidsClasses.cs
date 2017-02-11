@@ -25,6 +25,8 @@ namespace KidsClassFinder
         public decimal Price { get; private set; }
         public string Address { get; set; }
         public int Availability { get; private set; }
+        public string Name { get; set; }
+
         #endregion
 
 
@@ -32,7 +34,7 @@ namespace KidsClassFinder
         //Constructor for Availability
         public KidsClasses()
         {
-            this.Availability = AvailabilityNumber++;
+            this.Availability = --AvailabilityNumber;
                 }
 
         // still figuring out more methods

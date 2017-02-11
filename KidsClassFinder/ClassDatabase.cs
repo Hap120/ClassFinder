@@ -12,7 +12,5 @@ namespace KidsClassFinder
 
         string[] myClassDatabase = new string[10];
         
-        
-        
     }
 }

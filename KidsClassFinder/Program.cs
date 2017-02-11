@@ -9,17 +9,7 @@ namespace KidsClassFinder
     class Program
     {
         static void Main(string[] args)
-        {
-           /* KidsClasses myClass = new KidsClasses();
-            myClass.Type = "Sports";
-            myClass.Session = "Summer";
-            myClass.ForAges = "10";
-            myClass.LocationCity = "Redmond";
-            Console.WriteLine($"Look for a {myClass.Type} class for age {myClass.ForAges} in {myClass.LocationCity} for the {myClass.Session}");
-            */
-
-            //Questions:
-            //Which of the two is more suitable for user entering information? The approach above ^ or the one following the comments ?
+        {          
 
             Console.WriteLine("Please enter details to find classes closest to you");
             Console.WriteLine("What type of class are you looking for? : Sports/Art/Dance");
