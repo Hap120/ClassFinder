@@ -9,9 +9,7 @@ namespace KidsClassFinder
     class KidsClasses
     {
         #region Statics
-        // This is to let the user know how many spots are currently available in a particular class. 
-        //As more people sign up the number should progressively reduce
-
+       
         private static int AvailabilityNumber = 10;
         
         #endregion
