@@ -6,39 +6,32 @@ using System.Threading.Tasks;
 
 namespace KidsClassFinder
 {
+   
+
     class Program
     {
         static void Main(string[] args)
         {          
 
             Console.WriteLine("Please enter details to find classes closest to you");
-            Console.WriteLine("What type of class are you looking for? : Sports/Art/Dance");
-            //Planning to put an if statement here .. for now I only have the following progression sports-soccer-session-city-ages
-            var Sports = Console.ReadLine();
-            Console.WriteLine("Choose an option: Soccer,  Swimming, Football ");
-            var SportType = Console.ReadLine();
+
+            Console.WriteLine($"What type of class are you looking for? : "); // drop down menu 
+            var classType = Console.ReadLine();
                    
-            Console.WriteLine("Enter session: Summer, Spring, Fall, Winter");
+            Console.WriteLine("Enter session: "); // drop down menu
             var session = Console.ReadLine();
 
-            Console.WriteLine("What city do you prefer? : Sammamish, Redmond, Bellevue");
+            Console.WriteLine("What city do you prefer? : ");  //drop down menu
             var city = Console.ReadLine();
 
-            Console.WriteLine("What ages are you looking for?");
+            Console.WriteLine("What ages are you looking for?"); //drop down menu
             var age = Console.ReadLine();
 
-            Console.WriteLine($"Please wait until we look for a {SportType} class for age {age} in {city} for the {session}");
-             
+            Console.WriteLine($"Press any key to look for a {classType} class for age {age} in {city} for the {session}");
+          
+            Console.ReadLine();
 
-           // Console.WriteLine($"The following classes meet your requirement: {A}, {B}, {C}");
-            //Can this placeholder info will be pulled from the array in ClaasDatabases.cs for now ?
-            var userInput = Console.ReadLine();
-
-            //Should I have separate classes for different kinds of Sports or can I have subclasses ?
-
-            Console.WriteLine("Press any Key to check availablity");
-
-            
+            Console.WriteLine("Press any Key to check availablity");         
 
         }
     }

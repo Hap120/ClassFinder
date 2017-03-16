@@ -43,10 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassDatabase.cs" />
-    <Compile Include="KidsClasses.cs" />
+    <Compile Include="Art.cs" />
+    <Compile Include="ClassesList.cs" />
+    <Compile Include="Dance.cs" />
+    <Compile Include="Gymnastics.cs" />
+    <Compile Include="Music.cs" />
+    <Compile Include="KidsClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Soccer.cs" />
+    <Compile Include="Swimming.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
