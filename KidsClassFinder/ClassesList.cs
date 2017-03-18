@@ -8,19 +8,31 @@ namespace KidsClassFinder
 {
     class ClassesList
     {
-        public List<KidsClass> AllClasses { get; set; }
 
-        public void PopulateList()
+
+        /* public List<KidsClass> AllClasses { get; set; }
+
+          public void PopulateList()
+          {
+              AllClasses.Add(new Soccer(Timeframe.Fall, City.Redmond,
+                 9 , 30, "120 NE 85th st", 10, "Arena Soccer"));
+              AllClasses.Add(new Swimming(Timeframe.Summer, City.Sammammish,
+                  5, 100, "3400 160th Ave NE", 5, "YMCA Swimming"));
+          }
+
+        */
+
+        public void PopulateDb()
         {
-            AllClasses.Add(new Soccer(Type.Soccer, Timeframe.Fall, City.Redmond,
-                "6,7,8,9,10", 30M, "120 NE 85th st", 10, "Arena Soccer"));
-            AllClasses.Add(new Swimming(Type.Swimming, Timeframe.Summer, City.Sammammish,
-                "4,5", 100M, "3400 160th Ave NE", 5, "YMCA Swimming"));
+            var db = new KidsClassModel();
+            db.KidsClasses.Add(new Soccer(Timeframe.Fall, City.Bellevue, 7, 100, "120 Bellevue Way", 10, "Bellevue Soccer"));
+            db.KidsClasses.Add(new Soccer(Timeframe.Fall, City.Redmond,
+                 9, 30, "120 NE 85th st", 10, "Arena Soccer"));
+            db.KidsClasses.Add(new Swimming(Timeframe.Summer, City.Sammammish,
+                5, 100, "3400 160th Ave NE", 5, "YMCA Swimming"));
+            db.SaveChanges();
         }
 
-        public void Search(Type clType, Timeframe clSession, City clLocation, string clAge)
-        {
-             
-        }
+        
     }
 }

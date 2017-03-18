@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace KidsClassFinder
         Yearround
     }
 
-    public enum Type
+    public enum ClassType
     {
         Soccer,
         Swimming,
@@ -36,15 +37,7 @@ namespace KidsClassFinder
         Music
    }
 
-    public enum Age
-    {
-        Five = 5,
-        Six = 6,
-        Seven = 7,
-        Eight = 8,
-        Nine = 9,
-        Ten = 10      
-    }
+     
     class KidsClass
     {        
 
@@ -55,22 +48,24 @@ namespace KidsClassFinder
         #endregion
 
         #region Properties
+        [Key]
              
         public Timeframe Session { get; set; }
         public City Location { get; set; }
-        public string Age { get; set; }
-        public decimal Price { get; private set; }
+        public int Age { get; set; }
+        public double Price { get; private set; }
         public string Address { get; set; }
         public int TotalSpots { get; private set; }
         public string Name { get; set; }
-        public Type ClassType { get; set; }
+        public ClassType ClsType { get; set; }
 
+        
         #endregion
 
         #region Methods
 
-        public KidsClass( Timeframe clSession, City clLocation, string clAge, 
-            decimal clPrice, string clAddress, int spotsTotal, string clName)
+        public KidsClass( Timeframe clSession, City clLocation, int clAge, 
+            double clPrice, string clAddress, int spotsTotal, string clName)
         {
             Session = clSession;
             Location = clLocation;

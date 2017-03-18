@@ -8,7 +8,7 @@ namespace KidsClassFinder
 {
     class Dance : KidsClass
     {
-        public Dance (Type clType, Timeframe clSession, City clLocation, string clAge, decimal clPrice,
+        public Dance (Timeframe clSession, City clLocation, int clAge, double clPrice,
             string clAddress, int spotsTotal, string clName) : base(clSession, clLocation, clAge, clPrice, clAddress, spotsTotal, clName)
         {
         }
