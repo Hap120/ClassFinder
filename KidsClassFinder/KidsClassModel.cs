@@ -4,7 +4,7 @@ namespace KidsClassFinder
     using System.Data.Entity;
     using System.Linq;
 
-    public class KidsClassModel : DbContext
+    class KidsClassModel : DbContext
     {
         // Your context has been configured to use a 'KidsClassesModel' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 

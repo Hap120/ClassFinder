@@ -64,9 +64,10 @@ namespace KidsClassFinder
 
         #region Methods
 
-        public KidsClass( Timeframe clSession, City clLocation, int clAge, 
+        public KidsClass( ClassType clType, Timeframe clSession, City clLocation, int clAge, 
             double clPrice, string clAddress, int spotsTotal, string clName)
         {
+            ClsType = clType;
             Session = clSession;
             Location = clLocation;
             Age = clAge;

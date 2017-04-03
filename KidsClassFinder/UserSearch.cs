@@ -9,25 +9,29 @@ namespace KidsClassFinder
     class UserSearch
 
     {
-        public virtual KidsClass KidsClass { get; set; }
-
-        public virtual ICollection<KidsClass> KidsClasses { get; set; }
-
-
+        // public virtual KidsClass KidsClass { get; set; }
         
-      public KidsClass Search(ClassType clType, Timeframe clSession, City clLocation, int clAge)
-      {
-            var db = new KidsClassModel();
+       //  public virtual ICollection<KidsClass> KidsClasses { get; set; }
 
-            foreach (var kidsClass in db.KidsClasses.Where(k => k.Location == clLocation).Where(k => k.Session == clSession).Where(k => k.ClsType == clType)
-                .Where(k => k.Age == clAge))             
+      
+        
+      public IQueryable<KidsClass> Search(ClassType clType, Timeframe clSession, City clLocation, int clAge)
+      {
+            List<KidsClass> listOfClassesToReturn = new List<KidsClass>();
+            KidsClassModel db = new KidsClassModel();
+
+            return db.KidsClasses.Where(k => k.Location == clLocation && k.Session == clSession && k.ClsType == clType)
+                .Where(k => k.Age == clAge);
+            foreach (var kidsClass in db.KidsClasses.Where(k => k.Location == clLocation && k.Session == clSession && k.ClsType == clType)
+                .Where(k => k.Age == clAge))           
                 
             {
-                Console.WriteLine($"We found {KidsClass.Name} at {KidsClass.Address} that matches your requirements");
-            }
+                listOfClassesToReturn.Add(kidsClass);
+                //Console.WriteLine($"We found {kidsClass.Name} at {kidsClass.Address} that matches your requirements");
 
-            return KidsClass;
-      }
+            }
+              
+        }
       
 
 
